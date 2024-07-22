@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 import Navbar from './components/navbar/Navbar';
+import Hero from './components/hero/Hero';
+import InfoBoxes from './components/infoBoxes/InfoBoxes';
 // import { ThemeProvider } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
@@ -22,6 +24,8 @@ export default function App() {
         <GlobalStyles/>
         <Container>
         <Navbar/>
+        <Hero/>
+        <InfoBoxes/>
         </Container> 
     </>
   )
