@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';
 import InfoBoxes from './components/infoBoxes/InfoBoxes';
+import InfoSectionOne from './components/infoSectionOne/InfoSectionOne';
 // import { ThemeProvider } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
@@ -13,20 +14,31 @@ body{
   }
 }
 `;
-
-
 const Container = styled.div`
 height: 100vh;
 `;
+const theme = {
+  colors: {
+    primary: "darkBlue",
+    secondary: "tomato",
+    light: "balck",
+    text: "snow",
+    textDark: "gray",
+    bgDefault: "white",
+    bgPrimary:"darkBlue",
+    bgLight:"aliceBlue"
+  },
+}
 export default function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
         <GlobalStyles/>
         <Container>
-        <Navbar/>
-        <Hero/>
-        <InfoBoxes/>
+          <Navbar/>
+          <Hero/>
+          <InfoBoxes/>
+          <InfoSectionOne/>
         </Container> 
-    </>
+    </ThemeProvider>
   )
 }

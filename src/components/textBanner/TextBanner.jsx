@@ -8,13 +8,13 @@ const Container = styled.div`
     align-items: center;
 `;
 const Title = styled.div`
-    color:tomato;
+    color:${(props) => props.theme.colors.secondary};
 `;
 const SubTitle = styled.div`
     font-weight: bold;
     font-size: 50px;
     margin: 5px;
-    color: darkblue;
+    color: ${(props) => props.theme.colors.primary};
 `;
 export default function TextBanner( { title, subTitle } ) {
   return (

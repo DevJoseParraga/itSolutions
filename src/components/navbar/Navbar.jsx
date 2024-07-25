@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Container = styled.div`
   width: 100%;
   height: 10%;
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.bgdefault};
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -26,7 +26,7 @@ const RighBtn = styled.div`
 const Logo = styled.h1`
   font-size: 20px;
   text-decoration: none;
-  color: darkblue;
+  color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
 `;
 
@@ -38,23 +38,23 @@ const Menu = styled.ul`
 const MenuItem = styled.li`
   font-size: 20px;
   font-weight: bold;
-  color: gray;
+  color: ${(props) => props.theme.colors.textDark};
   cursor: pointer;
   &:hover{
-    color: darkblue;
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 const Button = styled.button`
   font-weight: bold;
-  background-color: darkblue;
+  background-color: ${(props) => props.theme.colors.bgPrimary};
   border: 2px solid white;
   cursor: pointer;
-  color: white;
+  color: ${(props) => props.theme.colors.bgDefault};
   padding: 10px 20px;
   border-radius: 10px;
   &:hover{
-    background-color: aliceblue;
-    color: darkblue;
+    background-color: ${(props) => props.theme.colors.bgLight};
+    color: ${(props) => props.theme.colors.primary};
     border: 2px solid darkblue;
   }
 `;

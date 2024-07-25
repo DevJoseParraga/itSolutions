@@ -5,12 +5,12 @@ export const Card = styled.div`
     margin: 10px 10px;
     -webkit-box-shadow: 4px 5px 17px -7px #dad0d0; 
     box-shadow: 4px 5px 17px -7px #a8a4a4;
-    background: linear-gradient(to right, aliceblue 50%, snow 50%);
+    background: linear-gradient(to right, ${(props) => props.theme.colors.bgLight} 50%, ${(props) => props.theme.colors.bgDefault} 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 0.5s ease-out;
     &:hover{
-        color: snow;
+        color: ${(props) => props.theme.colors.textDark};
         background-position: left bottom;
         cursor: pointer;
     }
@@ -24,10 +24,10 @@ export const CardContent = styled.div`
     
 `
 export const Cardtitle = styled.h3`
-    color: darkblue;
+    color: ${(props) => props.theme.colors.Primary};
 `
 export const Description = styled.div`
-    color: gray;
+    color: ${(props) => props.theme.colors.textDark};
     font-size: 15px;
     text-align: center;
     margin-top: 15px;
